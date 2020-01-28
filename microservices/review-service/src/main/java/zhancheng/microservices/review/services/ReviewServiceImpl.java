@@ -3,6 +3,7 @@ package zhancheng.microservices.review.services;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
 import zhancheng.api.review.Review;
 import zhancheng.api.review.ReviewService;
 import zhancheng.util.exception.InvalidInputException;
@@ -10,7 +11,7 @@ import zhancheng.util.http.ServiceUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@RestController
 public class ReviewServiceImpl implements ReviewService {
 
     private static final Logger LOG = LoggerFactory.getLogger(ReviewServiceImpl.class);

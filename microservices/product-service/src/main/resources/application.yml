@@ -3,4 +3,9 @@ server.port: 7001
 logging:
   level:
     root: INFO
-    zhancheng.microservices: DEBUG
+    zhancheng: DEBUG
+
+---
+spring.profiles: docker
+
+server.port: 8080
