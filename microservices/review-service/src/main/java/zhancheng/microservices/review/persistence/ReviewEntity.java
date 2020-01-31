@@ -25,4 +25,11 @@ public class ReviewEntity {
     private String subject;
     private String content;
 
+    public ReviewEntity(int productId, int reviewId, String author, String subject, String content) {
+        this.productId = productId;
+        this.reviewId = reviewId;
+        this.author = author;
+        this.subject = subject;
+        this.content = content;
+    }
 }

@@ -31,9 +31,7 @@ public class ProductCompositeServiceApplication {
 	@Value("${api.common.contact.url}")       String apiContactUrl;
 	@Value("${api.common.contact.email}")     String apiContactEmail;
 
-	public static void main(String[] args) {
-		SpringApplication.run(ProductCompositeServiceApplication.class, args);
-	}
+
 	// Bean generation for RestTemplate
 	@Bean
 	RestTemplate restTemplate() {
