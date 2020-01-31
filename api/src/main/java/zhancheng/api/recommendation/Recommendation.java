@@ -15,5 +15,4 @@ public class Recommendation {
     private  String content;
     private  String serviceAddress;
 
-    
 }

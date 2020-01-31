@@ -22,7 +22,7 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 	// lombok
 	compileOnly('org.projectlombok:lombok:1.18.10')
-	annotationProcessor('org.projectlombok:lomboks:1.18.10')
+	annotationProcessor('org.projectlombok:lombok:1.18.10')
 	implementation('org.projectlombok:lombok:1.18.10')
 	testImplementation 'io.projectreactor:reactor-test'
 	implementation('org.springframework.boot:spring-boot-starter-data-mongodb')

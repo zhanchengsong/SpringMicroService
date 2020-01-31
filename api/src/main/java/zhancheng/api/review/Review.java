@@ -14,4 +14,5 @@ public class Review {
     private String content;
     private String serviceAddress;
 
+
 }

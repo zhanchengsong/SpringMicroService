@@ -34,7 +34,6 @@ public class PersistenceTests {
     @Before
     public void setupDb() {
         repository.deleteAll();
-
         ProductEntity entity = new ProductEntity(1, "n", 1);
         savedEntity = repository.save(entity);
 

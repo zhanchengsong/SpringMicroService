@@ -58,4 +58,7 @@ public class ProductCompositeServiceApplication {
 						emptyList()
 				));
 	}
+	public static void main(String[] args) {
+		SpringApplication.run(ProductCompositeServiceApplication.class, args);
+	}
 }
