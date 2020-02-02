@@ -1,6 +1,6 @@
 package zhancheng.microservices.product.services;
 
-import com.mongodb.DuplicateKeyException;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import zhancheng.api.product.Product;

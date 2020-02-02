@@ -4,8 +4,16 @@ logging:
   level:
     root: INFO
     zhancheng: DEBUG
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+
+spring.data.mongodb:
+  host: localhost
+  port: 27017
+  database: product-db
 
 ---
 spring.profiles: docker
 
 server.port: 8080
+
+spring.data.mongodb.host: mongodb
