@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'Kube'
-    }
-
-  }
+  agent any
   stages {
     stage('Build Jar') {
       steps {
