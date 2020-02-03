@@ -16,7 +16,7 @@ pipeline {
     }
     stage ('Build Images') {
         steps('Building Product-Service Image') {
-                  sh "'$DOCKER_HOME/bin/docker build microservices/product-service'"
+                  sh "'$DOCKER_HOME/docker build microservices/product-service'"
          }
     }
 
