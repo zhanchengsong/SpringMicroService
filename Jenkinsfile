@@ -2,6 +2,7 @@ pipeline {
   environment {
     gradleHome = tool 'Gradle6'
     GRADLE_HOME = tool 'Gradle6'
+    JAVA_HOME = tool 'JDK8'
   }
   agent any
   stages {
