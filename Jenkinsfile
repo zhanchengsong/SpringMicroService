@@ -7,6 +7,7 @@ node {
 
     stage('Build Jar') {
         // run Gradle to execute compile without unit testing
+        JAVA_HOME = tool 'JDK8'
         sh "'${gradleHome}/bin/gradle' -g gradle-user-home clean build -x test"
     }
     stage ('Build Images') {
