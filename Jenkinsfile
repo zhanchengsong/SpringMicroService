@@ -12,9 +12,12 @@ pipeline {
           // run Gradle to execute compile without unit testing
           sh "'${gradleHome}/bin/gradle' -g gradle-user-home clean build -x test"
       }
-      steps('Building Docker Images') {
-          sh "'$DOCKER_HOME/bin/docker build microservices/product-service'"
-      }
+
+    }
+    stage ('Build Images') {
+        steps('Building Product-Service Image') {
+                  sh "'$DOCKER_HOME/bin/docker build microservices/product-service'"
+         }
     }
 
   }
