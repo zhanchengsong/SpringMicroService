@@ -4,7 +4,7 @@ pipeline {
     stage('Build Jar') {
       steps {
         withGradle() {
-          sh './gradlew build '
+          sh 'gradle build '
         }
 
       }
