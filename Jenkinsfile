@@ -8,7 +8,7 @@ pipeline {
     stage('Build Jar') {
       steps('Gradle Build') {
           // run Gradle to execute compile without unit testing
-          sh "'${gradleHome}/gradle' clean build -x test"
+          sh "'${gradleHome}/bin/gradle' clean build -x test"
 
 
       }
