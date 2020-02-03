@@ -4,7 +4,9 @@ pipeline {
     stage('Build Jar') {
       steps {
         withGradle() {
-          sh 'gradle build '
+          def gradleHome = tool 'Gradle6'
+           // run Gradle to execute compile and unit testing
+          sh "'${gradleHome}/bin/gradle' clean compileJava test"
         }
 
       }
