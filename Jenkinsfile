@@ -1,6 +1,7 @@
-def gradleHome = tool 'Gradle6'
 pipeline {
-
+  environment {
+    gradleHome = tool 'Gradle6'
+  }
   agent any
   stages {
     stage('Build Jar') {
