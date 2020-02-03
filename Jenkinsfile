@@ -5,6 +5,12 @@ node {
     def JAVA_HOME = tool 'JDK8'
     def DOCKER_HOME = tool 'Docker'
 
+    environment {
+        GRADLE_HOME = tool 'Gradle6'
+        JAVA_HOME = tool 'JDK8'
+
+    }
+
     stage('Build Jar') {
         // run Gradle to execute compile without unit testing
         JAVA_HOME = tool 'JDK8'
