@@ -4,6 +4,10 @@ node {
     def GRADLE_HOME = tool 'Gradle6'
     def JAVA_HOME = tool 'JDK8'
     def DOCKER_HOME = tool 'Docker'
+    stage('Initialize'){
+            def dockerHome = tool 'Docker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
 
     environment {
         GRADLE_HOME = tool 'Gradle6'
