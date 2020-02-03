@@ -6,7 +6,9 @@ node {
     def DOCKER_HOME = tool 'Docker'
 
     stage('Build Jar') {
-
+          def gradleHome = tool 'Gradle6'
+          def GRADLE_HOME = tool 'Gradle6'
+          def JAVA_HOME = tool 'JDK8'
           // run Gradle to execute compile without unit testing
           sh "'${gradleHome}/bin/gradle' -g gradle-user-home clean build -x test"
     }
