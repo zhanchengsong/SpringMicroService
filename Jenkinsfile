@@ -1,4 +1,4 @@
-pipeline {
+node {
   environment {
     gradleHome = tool 'Gradle6'
     GRADLE_HOME = tool 'Gradle6'
