@@ -4,11 +4,11 @@ pipeline {
   agent any
   stages {
     stage('Build Jar') {
-      steps {
-        withGradle() {
+      steps('Gradle Build') {
+
            // run Gradle to execute compile and unit testing
           sh "'${gradleHome}/bin/gradle' clean compileJava test"
-        }
+
 
       }
     }
