@@ -17,7 +17,7 @@ node {
     stage('Build Jar') {
         // run Gradle to execute compile without unit testing
         JAVA = tool 'JDK8'
-        sh "'${gradleHome}/bin/gradle' -g gradle-user-home -Dorg.gradle.java.home='${JAVA}' clean build -x test"
+        sh "'${gradleHome}/bin/gradle' -g gradle-user-home -Dorg.gradle.java.home='${JAVA}' clean build"
     }
     stage ('Build Images') {
         productService = docker.build("product-service", "microservices/product-service")
