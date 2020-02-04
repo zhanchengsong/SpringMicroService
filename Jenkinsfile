@@ -11,7 +11,6 @@ node {
 
     environment {
         GRADLE_HOME = tool 'Gradle6'
-        JAVA_HOME = tool 'JDK8'
 
     }
 
