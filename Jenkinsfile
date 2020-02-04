@@ -17,7 +17,7 @@ node {
     stage('Build Jar') {
         // run Gradle to execute compile without unit testing
         JAVA = tool 'JDK8'
-        sh "ls ./"
+        sh script: "ls *.json", returnStdout: true
         sh "'${gradleHome}/bin/gradle' -g gradle-user-home -Dorg.gradle.java.home='${JAVA}' clean build"
     }
     stage ('Build Images') {
