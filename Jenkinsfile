@@ -1,19 +1,17 @@
 pipeline {
-    agent any
-    environment {
-        DOCKER_HOME = tool 'Docker'
+
+    stage('Initialize'){
+            def dockerHome = tool 'Docker'
+            env.PATH = "${dockerHome}/bin:${env.PATH}"
+            checkout scm
     }
-    stages {
-        stage('build jar') {
-            steps {
-                checkout scm
-                sh "./gradlew build -x test"
-            }
-        }
-        stage('build image') {
-            steps {
-                sh "'{$DOCKER_HOME}/bin/docker build ./microservices/product-service/ "
-            }
-        }
+    stage('Build Jar') {
+        // run Gradle to execute compile without unit testing
+        sh "./gradlew clean build -x test"
     }
+    stage ('Build Images') {
+        productService = docker.build("product-service", "microservices/product-service")
+    }
+
+
 }
