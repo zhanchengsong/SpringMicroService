@@ -1,19 +1,19 @@
 pipeline {
     agent any
-
-    stage('Initialize'){
-            def dockerHome = tool 'Docker'
-            env.PATH = "${dockerHome}/bin:${env.PATH}"
-            checkout scm
+    environment {
+        DOCKER_HOME = tool 'Docker'
     }
-    stage('Build Jar') {
-
-        sh "./gradlew clean build -x test"
+    stages {
+        stage('build jar') {
+            steps {
+                checkout scm
+                sh "./gradlew build -x test"
+            }
+        }
+        stage('build image') {
+            steps {
+                sh "'{$DOCKER_HOME}/bin/docker build ./microservices/product-service/ "
+            }
+        }
     }
-    stage ('Build Images') {
-        //productService = docker.build("product-service", "microservices/product-service")
-        sh "docker build microservices/product-service -t product-service:latest"
-    }
-
-
 }
