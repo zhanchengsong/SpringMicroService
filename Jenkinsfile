@@ -7,7 +7,7 @@ node {
             def dockerHome = tool 'Docker'
             def gradleHome = tool 'Gradle6'
             env.PATH = "${dockerHome}/bin:${env.PATH}"
-            env.PATH = "${gradleHome}/bin;$[env.PATH}"
+            env.PATH = "${gradleHome}/bin:$[env.PATH}"
     }
 
     environment {
